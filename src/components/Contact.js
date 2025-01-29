@@ -4,6 +4,9 @@ import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+// Backend URL (Replace with your Render backend URL)
+const backendUrl = "https://backend-aww3.onrender.com";
+
 export const Contact = () => {
   const formInitialDetails = {
     firstName: '',
@@ -12,9 +15,10 @@ export const Contact = () => {
     phone: '',
     message: ''
   };
+
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
+  const [status, setStatus] = useState(null);
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -26,28 +30,29 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
+
     try {
-      const response = await fetch("http://localhost:5000/contact", {
+      const response = await fetch(`${backendUrl}/contact`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formDetails),
       });
-      setButtonText("Send");
 
       const result = await response.json();
+      setButtonText("Send");
 
       if (response.ok && result.code === 200) {
-        setStatus({ success: true, message: 'Message sent successfully' });
+        setStatus({ success: true, message: "Message sent successfully!" });
         setFormDetails(formInitialDetails);
       } else {
-        setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+        setStatus({ success: false, message: "Something went wrong. Please try again later." });
       }
     } catch (error) {
-      setButtonText("Send");
-      setStatus({ success: false, message: 'Failed to send message. Please try again later.' });
+      setStatus({ success: false, message: "Failed to send message. Please try again later." });
     }
+
+    // Clear the message after 5 seconds
+    setTimeout(() => setStatus(null), 5000);
   };
 
   return (
@@ -116,14 +121,13 @@ export const Contact = () => {
                           <span>{buttonText}</span>
                         </button>
                       </Col>
-                      {
-                        status.message &&
+                      {status && (
                         <Col>
-                          <p className={status.success === false ? "danger" : "success"}>
+                          <p className={status.success ? "success" : "danger"}>
                             {status.message}
                           </p>
                         </Col>
-                      }
+                      )}
                     </Row>
                   </form>
                 </div>}
