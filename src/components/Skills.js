@@ -1,6 +1,6 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import meter1 from "../assets/img/meter1.svg"; // Advanced
+import meter2 from "../assets/img/meter2.svg"; // Intermediate
+import meter3 from "../assets/img/meter3.svg"; // Basic
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
@@ -29,43 +29,63 @@ export const Skills = () => {
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>These are the skills I have honed throughout my career, specializing in AI, machine learning, and full-stack web development.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Python (Advanced)</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Machine Learning</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>AI Model Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development (MERN Stack)</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>MySQL & Database Management</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>JavaScript (Intermediate)</h5>
-                            </div>
-                        </Carousel>
-                    </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
+              <h2>Skills</h2>
+              <p>
+                These are the core technical and programming skills I’ve developed through real-world experience in AI, machine learning, and full-stack development.
+              </p>
+              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+
+                <div className="item">
+                  <img src={meter1} alt="Python" />
+                  <h5>Python</h5>
                 </div>
+                <div className="item">
+                  <img src={meter2} alt="JavaScript" />
+                  <h5>JavaScript</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="MERN Stack" />
+                  <h5>MERN Stack</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="MySQL" />
+                  <h5>MySQL & DBMS</h5>
+                </div>
+                <div className="item">
+                  <img src={meter1} alt="Machine Learning" />
+                  <h5>Machine Learning</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="OpenCV and PyTorch" />
+                  <h5>OpenCV & PyTorch</h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="TensorFlow" />
+                  <h5>TensorFlow & Pandas</h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="Flask and NumPy" />
+                  <h5>Flask & NumPy</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="C++" />
+                  <h5>C / C++</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="Git and Linux" />
+                  <h5>Git & Linux</h5>
+                </div>
+
+              </Carousel>
             </div>
+          </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+      </div>
+      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   );
 };

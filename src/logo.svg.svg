@@ -1,0 +1,18 @@
+<svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="200" height="200" rx="30" fill="#0A0A0A"></rect>
+  
+  <!-- Stylish Italic P -->
+  <path d="M70 150L85 50H130C145 50 160 65 160 85C160 105 145 120 125 120H95L90 150H70ZM130 105C140 105 145 95 145 85C145 75 138 65 128 65H98L93 105H130Z" fill="url(#grad2)" transform="skewX(-10)"></path>
+
+  <!-- Watermark: Parth Garg -->
+  <text x="100" y="190" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.08)" font-family="Arial, sans-serif" letter-spacing="1">
+    Parth Garg
+  </text>
+
+  <defs>
+    <linearGradient id="grad2" x1="70" y1="50" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00FFF7"></stop>
+      <stop offset="1" stop-color="#007BFF"></stop>
+    </linearGradient>
+  </defs>
+</svg>

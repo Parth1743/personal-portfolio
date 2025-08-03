@@ -1,6 +1,6 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.webp";
+import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.webp";
 import projImg3 from "../assets/img/project-img3.webp";
 import projImg4 from "../assets/img/img4.webp";
@@ -13,11 +13,6 @@ import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
   // Categorized projects
   const personalProjects = [
-    {
-      title: "Library Management System",
-      description: "An interactive system using Python and MySQL for managing book stock, member records, and transactions. It features search functionality and reporting tools for easy management.",
-      imgUrl: projImg1,
-    },
     {
       title: "Weapon Detection AI Model",
       description: "Developed a YOLO-based AI model with 90% accuracy for weapon detection, featuring a web interface built with the MERN stack. The project focuses on public safety applications.",
@@ -35,7 +30,7 @@ export const Projects = () => {
     },
   ];
 
-  const internships = [
+  const experience = [
     {
       title: "AI Engineer Intern - Nasscom",
       description: "Worked on multiple AI and ML projects during my internship at Nasscom, gaining hands-on experience with various programming languages and tools.",
@@ -45,6 +40,12 @@ export const Projects = () => {
       title: "Python Developer Intern - CodeClause",
       description: "Developed and implemented several Python projects, earning a Letter of Recommendation for outstanding contributions and expertise in Python.",
       imgUrl: projImg5,
+    },
+    {
+      title: "Junior AI Engineer - Johnnette Technologies",
+      description:"Built a real-time object tracking system for Edge devices, achieving 30+ FPS and 90%+ RE-ID accuracy under occlusion. Deployed using PyTorch, TensorRT, and OpenCV, delivering a market-unique edge AI solution optimized for real-world performance.",
+
+      imgUrl: projImg1, // Replace with a more appropriate image if needed
     },
   ];
 
@@ -66,7 +67,7 @@ export const Projects = () => {
                         <Nav.Link eventKey="first">All Projects</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Internships</Nav.Link>
+                        <Nav.Link eventKey="second">Experience</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="third">Personal Projects</Nav.Link>
@@ -76,16 +77,16 @@ export const Projects = () => {
                       {/* All Projects */}
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {personalProjects.concat(internships).map((project, index) => (
+                          {personalProjects.concat(experience).map((project, index) => (
                             <ProjectCard key={index} {...project} />
                           ))}
                         </Row>
                       </Tab.Pane>
 
-                      {/* Internships */}
+                      {/* Experience */}
                       <Tab.Pane eventKey="second">
                         <Row>
-                          {internships.map((project, index) => (
+                          {experience.map((project, index) => (
                             <ProjectCard key={index} {...project} />
                           ))}
                         </Row>
