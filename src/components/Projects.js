@@ -1,8 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.webp";
-import projImg3 from "../assets/img/project-img3.webp";
+import projImg2 from "../assets/img/img2.jpg";
+import projImg3 from "../assets/img/img.png";
 import projImg4 from "../assets/img/img4.webp";
 import projImg5 from "../assets/img/img5.webp";
 import projImg6 from "../assets/img/img6.webp";
@@ -15,7 +15,7 @@ export const Projects = () => {
   const personalProjects = [
     {
       title: "Weapon Detection AI Model",
-      description: "Developed a YOLO-based AI model with 90% accuracy for weapon detection, featuring a web interface built with the MERN stack. The project focuses on public safety applications.",
+      description: "Developed J.A.R.V.I.S. 1.0, a voice-controlled desktop assistant for true automation of tasks, blending an AI butler persona with features like wake-word activation, conversational mode, app management, web search, and system automation through an intuitive interface.",
       imgUrl: projImg2,
     },
     {
@@ -33,7 +33,7 @@ export const Projects = () => {
   const experience = [
     {
       title: "AI Engineer Intern - Nasscom",
-      description: "Worked on multiple AI and ML projects during my internship at Nasscom, gaining hands-on experience with various programming languages and tools.",
+      description: "Worked on multiple AI and ML projects during my internship at Nasscom, gaining hands-on experience with various programming languages and tools. Created PoliceMitra, a web-based tool for law enforcement agencies featuring a weapon detection model, RAG-powered LLM, and a MERN-based interface",
       imgUrl: projImg3,
     },
     {
