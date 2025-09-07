@@ -14,7 +14,7 @@ export const Projects = () => {
   // Categorized projects
   const personalProjects = [
     {
-      title: "Weapon Detection AI Model",
+      title: "J.A.R.V.I.S 1.0",
       description: "Developed J.A.R.V.I.S. 1.0, a voice-controlled desktop assistant for true automation of tasks, blending an AI butler persona with features like wake-word activation, conversational mode, app management, web search, and system automation through an intuitive interface.",
       imgUrl: projImg2,
     },
